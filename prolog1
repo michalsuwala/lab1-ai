@@ -49,6 +49,7 @@ rodzenstwo_przyrodnie_g(X, Y) :-
     dziadek(Y, Z),
     rodzic(X, Z).
 
+
 Zadanie 2
 
 mezczyzna(a).
@@ -82,3 +83,32 @@ kuzyn(X, Y) :-
     rodzic(N, Y),
     (   brat_rodzony(M, N);
     brat_przyrodni(M, N)).
+
+dziadek_od_strony_ojca(X,Y) :-
+    ojciec(Z, Y),
+    ojciec(X, Z).
+
+dziadek_od_strony_matki(X,Y) :-
+    matka(Z, Y),
+    ojciec(X, Z).
+
+dziadek(X,Y) :-
+    rodzic(Z, Y),
+    ojciec(X, Z).
+
+babcia(X,Y) :-
+    rodzic(Z, Y),
+    matka(X, Z).
+
+wnuczka(X,Y) :-
+    babcia(Y, X),
+    kobieta(X).
+
+przodek_do2pokolenia_wstecz(X,Y) :-
+    dziadek(X, Y);
+    babcia(X, Y).
+
+przodek_do3pokolenia_wstecz(X,Y) :-
+    (   dziadek(Z, Y);
+    babcia(Z, Y)),
+    rodzic(X, X).
