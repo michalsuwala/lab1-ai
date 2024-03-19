@@ -1,20 +1,20 @@
 Zadanie 1
 
-• wypełnianie deklaracji PIT
+* wypełnianie deklaracji PIT
 Wymagałoby sprawdzenia poprawności przez człowieka.
-• układanie rozkładu jazdy transportu miejskiego
+* układanie rozkładu jazdy transportu miejskiego
 Podobnie w tym przypadku.
-• programowanie (pisanie programów komputerowych)
+* programowanie (pisanie programów komputerowych)
 Zależnie od rodzaju programu sztuczna inteligencja mogłaby go napisać samemu lub służyć jednynie jako narzędzie.
-• „programowanie” kanałów telewizyjnych
+* „programowanie” kanałów telewizyjnych
 Sztuczna inteligencja mogłaby poprawnie zarządzać harmonogranem, lecz zależnie od celu mogłaby mieć problem z doborem treści.
-• testowanie oprogramowania
+* testowanie oprogramowania
 Człowiek jest potrzebny na przykład do doboru strategii testowania oraz do doboru danych testowych.
-• komponowanie muzyki
+* komponowanie muzyki
 Człowiek w tym przypadku jest potrzebny do przekazania charakteru kompozycji i do oceniania wyników.
-• rozwiązywanie układów równań
-• symboliczne obliczanie pochodnych funkcji
-• symboliczne całkowanie funkcji
+* rozwiązywanie układów równań
+* symboliczne obliczanie pochodnych funkcji
+* symboliczne całkowanie funkcji
 Zależnie od wagi wyników człowiek może byc potrzebny do oceny poprawności.
 
 
