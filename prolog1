@@ -48,3 +48,37 @@ rodzenstwo_przyrodnie_g(X, Y) :-
     rodzenstwo_przyrodnie(X, Y),
     dziadek(Y, Z),
     rodzic(X, Z).
+
+Zadanie 2
+
+mezczyzna(a).
+osoba(b).
+rodzic(a, b).
+rodzic(y, z).
+rodzic(x, y).
+rodzic(x, a).
+
+kobieta(X) :- osoba(X), not(mezczyzna(x)).
+
+ojciec(X, Y) :- mezczyzna(X), rodzic(X, Y).
+
+matka(X, Y) :- kobieta(X), rodzic(X, Y).
+
+corka(X, Y) :- kobieta(X), rodzic(Y, X).
+
+brat_rodzony(X, Y) :- 
+    ojciec(M, X),
+    ojciec(M, Y),
+    matka(N, X),
+    matka(N, Y).
+
+brat_przyrodni(X, Y) :-
+    rodzic(M, X),
+    rodzic(M, Y),
+    not(brat_rodzony(X, Y)).
+
+kuzyn(X, Y) :-
+    rodzic(M, X),
+    rodzic(N, Y),
+    (   brat_rodzony(M, N);
+    brat_przyrodni(M, N)).
