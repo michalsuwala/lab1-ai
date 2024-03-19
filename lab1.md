@@ -1,6 +1,6 @@
 Zadanie 1
 
-* wypełnianie deklaracji PIT
+* wypełnianie deklaracji PIT.
 Wymagałoby sprawdzenia poprawności przez człowieka.
 * układanie rozkładu jazdy transportu miejskiego
 Podobnie w tym przypadku.
