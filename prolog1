@@ -1,0 +1,50 @@
+Zadanie 1.1
+
+A - x i y są rodzeństwem
+
+B - x i y są kuzynami
+
+C - x i y są dziadkami tego samego wnuczka
+
+D - y jest przyrodnim rodzicem x, x jest przyrodnim dzieckiem y
+
+E - x i y są przyrodnim rodzeństwem
+
+F - x i y są dla siebie szwagrami
+
+G - X i y są przyrodnim rodzeństwem
+
+
+Zadanie 1.2
+
+dziadek(X, Z) :- rodzic(X, Y), rodzic(Y, Z).
+
+rodzenstwo(X, Y) :- 
+    rodzic(X, Z), 
+    rodzic(Y, Z), 
+    rodzic(X, M), 
+    rodzic(Y, M).
+
+rodzenstwo_przyrodnie(X, Y) :- rodzic(X, Z), rodzic(Y, Z).
+
+kuzyn(X, Y) :- 
+    rodzic(X, A),
+    rodzic(Y, B),
+    rodzenstwo_przyrodnie(A, B).
+
+dziadkowie(X, Y) :- dziadek(M, X), dziadek(M, Y).
+
+przyrodni_rodzic(X, Y) :- 
+    rodzic(X, Z),
+    rodzic(M, Z),
+    rodzic(M, Y).
+    
+szwagier(X, Y) :-
+    rodzic(Z, X),
+    dziadek(Z, M),
+    rodzic(Y, M).
+
+rodzenstwo_przyrodnie_g(X, Y) :-
+    rodzenstwo_przyrodnie(X, Y),
+    dziadek(Y, Z),
+    rodzic(X, Z).
