@@ -33,8 +33,22 @@ znajduje się poza. Choć sztuczna inteligencja może w tym człowieka wspomaga�
 
 Zadanie 3
 
-Obecnie wszystkie z nich są możliwe do skutecznej imitacji, głównie gdy sztuczna inteligencja ma dostęp do obecnych informacji. Niemniej
-przy odpowiednim prowadzeniu rozmowy da się rozpoznać, że nie jest to rozmowa z prawdziwym człowiekiem.
+* rozmowa towarzyska
+
+  Zależnie od rodzaju bota rozmowa może być imitowana na dość wysokim poziomie. Rozpoznanie, że nie rozmawiamy z człowiekiem może być
+  bardzo trudne.
+* dyskusja polityczna
+
+  Przy dostępie do obecnych informacji taka dyskusja wydaje się możliwa do osiągnięcia na zadowolającym poziomie.
+* dyskusja naukowa
+
+  Na bardziej podstawowym poziomie rozmowa będzie udana, im wyżej w specializacji tym wyniki będą prawdopodobnie gorsze.
+
+* odpowiadanie na pytania klientów w telefonicznej infolinii  
+* odpowiadanie na pytania klientów w internetowej infolinii.
+
+  Odpowiednio zaimplementowane nie powinno sprawiać to sztucznej inteligencji żadnych problemów.
+
 
 Zadanie 4
 
