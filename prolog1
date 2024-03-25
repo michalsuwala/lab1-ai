@@ -112,3 +112,108 @@ przodek_do3pokolenia_wstecz(X,Y) :-
     (   dziadek(Z, Y);
     babcia(Z, Y)),
     rodzic(X, X).
+
+
+
+
+Dla chętnych 2
+
+Zadanie 1
+a)
+Stałe indywidualne:
+* Markus
+* Cezar
+
+Predykaty:
+* człowiek
+* Pompejańczyk
+* Rzymianin
+* władca
+* lojalność
+* nienawiść
+* zamach
+
+
+* czlowiek(Markus)
+* pompejanczyk(Markus)
+* ∀x(pompejanczyk(x)) -> rzymianin(X)
+* wladca(Cezar)
+* ∀x(rzymianin(x) -> (lojalnosc(x, Cezar) ∨ nienawisc(x, Cezar)))
+* ∀x ∃y(lojalny(x, y))
+* (zamach(x, y) ∧ wladca(y) ∧ czlowiek(x)) -> ∼lojalnosc(x, y)
+* zamach(Markus, Cezar)
+
+b)
+(zamach(Markus, Cezar) ∧ wladca(Cezar) ∧ czlowiek(Markus)) -> ∼lojalnosc(Markus, Cezar)
+Markus nie był lojalny wobec Cezara.
+
+c)
+* czlowiek(Markus)
+* pompejanczyk(Markus)
+* ∀x(∼pompejanczyk(x) ∨  rzymianin(X))
+* wladca(Cezar)
+* ∀x(∼rzymianin(x) ∨ lojalnosc(x, Cezar) ∨ nienawisc(x, Cezar))
+* ∀x ∃y(lojalny(x, y))
+* ∼zamach(x, y) ∨ ∼wladca(y) ∨ ∼czlowiek(x) ∨ ∼lojalnosc(x, y)
+* zamach(Markus, Cezar)
+
+d)
+Dodajemy negację ∼lojalnosc(Markus, Cezar)
+1.
+    ∼zamach(Markus, Cezar) ∨ ∼wladca(Cezar) ∨ ∼czlowiek(Markus) ∨ ∼lojalnosc(Markus, Cezar)
+    zamach(Markus, Cezar)
+    wladca(Cezar)
+    czlowiek(Markus)
+    lojalnosc(Markus, Cezar)
+2.
+    ∼wladca(Cezar) ∨ ∼czlowiek(Markus) ∨ ∼lojalnosc(Markus, Cezar)
+    wladca(Cezar)
+    czlowiek(Markus
+    lojalnosc(Markus, Cezar)
+3.
+    ∼czlowiek(Markus) ∨ ∼lojalnosc(Markus, Cezar)
+    czlowiek(Markus
+    lojalnosc(Markus, Cezar)
+4.
+    ∼lojalnosc(Markus, Cezar)
+    lojalnosc(Markus, Cezar)
+5. 
+    Zostaje zbiór pusty, co pokazuje, że Markus nie jest lojalny wobec Cezara.
+
+
+Zadanie 2
+
+a)
+* ∀x(pozywienie(x) -> lubi(Jan, x)
+* pozywienie(jablka)
+* pozywienie(kurczak)
+* ∀x,y(je(x, y) ∧ ∼zabija(y, x) -> pozywienie(y))
+* je(Adam, orzeszki) ∧ ∼zabija(orzeszki, Adam)
+* ∀x(je(Adam, x) -> je(Basia, x))
+
+b)
+* ∀x(∼pozywienie(x) ∨ lubi(Jan, x)
+* pozywienie(jablka)
+* pozywienie(kurczak)
+* ∀x,y(∼je(x, y) ∨ zabija(y, x) ∨ pozywienie(y))
+* ∼(∼je(Adam, orzeszki) ∨ zabija(orzeszki, Adam))
+* ∀x(∼je(Adam, x) ∨ je(Basia, x))
+
+c)
+Dodajemy negację pozywienie(orzeszki)
+1. 
+    je(Adam, orzeszki) ∧ ∼zabija(orzeszki, Adam)
+    ∼je(Adam, orzeszki) ∨ zabija(orzeszki, Adam) ∨ pozywienie(orzeszki)
+    ∼pozywienie(orzeszki)
+2.
+    ∼zabija(orzeszki, Adam)
+    zabija(orzeszki, Adam) ∨ pozywienie(orzeszki)
+    ∼pozywienie(orzeszki)
+3.
+    pozywienie(orzeszki))
+    ∼pozywienie(orzeszki)
+4. 
+    Zostaje zbiór pusty, co pokazuje, że pozywienie(orzeszki).
+
+    Teraz wiedząc, że ∼pozywienie(orzeszki) ∨ lubi(Jan, orzeszki) możemy wywnioskować, że Jan lubi orzeszki.
+    
