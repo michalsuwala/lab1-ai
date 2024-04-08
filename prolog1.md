@@ -291,7 +291,7 @@ Dodajemy negację pozywienie(orzeszki)\
 
 d)\
 ∼je(Adam, x) ∨ je(Basia, x)\
-je(Adam, orzeszki) \
+je(Adam, orzeszki) 
 
 1.\
     ∼je(Adam, orzeszki) ∨ je(Basia, orzeszki)\
@@ -301,18 +301,20 @@ je(Adam, orzeszki) \
     je(Basia, orzeszki)\
     ∼je(Basia, orzeszki)\
 3.\
-    Zostaje zbiór pusty, czyli Basia je orzeszki.\
+    Zostaje zbiór pusty, czyli Basia je orzeszki.
 
 
-Zadanie 4\
+Zadanie 4
 
 1. narodziny(Markus, 40)
 2. zniszczenie(Pompeje, 79)
 3. ∀x ∃y,q,z((narodziny(x, y) ∧ zniszczenie(Pompeje, z) ∧ y <= z) -> ~zyje(x, q))
 4. ∀x ∃y,q,z((zyje(x, y) ∧ zniszczenie(Pompeje, z) ∧ y > z) -> narodziny(x, q) ∧ y - q <= 150)
 
-Można to wykazać na dwa spsoby:\
+Można to wykazać na dwa sposoby:\
+
 a) Z użyciem 3 podpunktu - Markus narodził się przed zniszeniem Pompejów, co implikuje, że nie żyje.\
+
 b) Z użyciem 4 podpunktu - narodziny Markusa i rok 2021 dzieli więcej niż 150 lat, czyli wartość po implikacji
 ma wartość 0. To znaczy, że wartość przed implikacją również musi posiadać wartość 0. Rok 2021 jest po zniszczeniu 
 Pompejów, czyli stwierdzenie, że Markus żyje w roku 2021 jest nieprawdziwe.
