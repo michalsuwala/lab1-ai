@@ -232,7 +232,7 @@ c)
 d)
 Dodajemy negację ∼lojalnosc(Markus, Cezar)
 1.
-    ∼zamach(Markus, Cezar) ∨ ∼wladca(Cezar) ∨ ∼czlowiek(Markus) ∨ ∼lojalnosc(Markus, Cezar)
+    ∼zamach(Markus, Cezar) ∨ ∼wladca(Cezar) ∨ ∼czlowiek(Markus) ∨ ∼lojalnosc(Markus, Cezar)\
     zamach(Markus, Cezar)
     wladca(Cezar)
     czlowiek(Markus)
