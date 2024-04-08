@@ -230,27 +230,27 @@ c)
 * zamach(Markus, Cezar)
 
 d)
-Dodajemy negację ∼lojalnosc(Markus, Cezar)
-1.
+Dodajemy negację ∼lojalnosc(Markus, Cezar)\
+1.\
     ∼zamach(Markus, Cezar) ∨ ∼wladca(Cezar) ∨ ∼czlowiek(Markus) ∨ ∼lojalnosc(Markus, Cezar)\
-    zamach(Markus, Cezar)
-    wladca(Cezar)
-    czlowiek(Markus)
-    lojalnosc(Markus, Cezar)
-2.
-    ∼wladca(Cezar) ∨ ∼czlowiek(Markus) ∨ ∼lojalnosc(Markus, Cezar)
-    wladca(Cezar)
-    czlowiek(Markus
-    lojalnosc(Markus, Cezar)
-3.
-    ∼czlowiek(Markus) ∨ ∼lojalnosc(Markus, Cezar)
-    czlowiek(Markus
-    lojalnosc(Markus, Cezar)
-4.
-    ∼lojalnosc(Markus, Cezar)
-    lojalnosc(Markus, Cezar)
-5. 
-    Zostaje zbiór pusty, co pokazuje, że Markus nie jest lojalny wobec Cezara.
+    zamach(Markus, Cezar)\
+    wladca(Cezar)\
+    czlowiek(Markus)\
+    lojalnosc(Markus, Cezar)\
+2.\
+    ∼wladca(Cezar) ∨ ∼czlowiek(Markus) ∨ ∼lojalnosc(Markus, Cezar)\
+    wladca(Cezar)\
+    czlowiek(Markus)\
+    lojalnosc(Markus, Cezar)\
+3.\
+    ∼czlowiek(Markus) ∨ ∼lojalnosc(Markus, Cezar)\
+    czlowiek(Markus)\
+    lojalnosc(Markus, Cezar)\
+4.\
+    ∼lojalnosc(Markus, Cezar)\
+    lojalnosc(Markus, Cezar)\
+5. \
+    Zostaje zbiór pusty, co pokazuje, że Markus nie jest lojalny wobec Cezara.\
 
 
 Zadanie 2
