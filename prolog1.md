@@ -52,12 +52,12 @@ rodzenstwo_przyrodnie_g(X, Y) :-
 
 #### Zadanie 2
 
-mezczyzna(a).
-osoba(b).
-rodzic(a, b).
-rodzic(y, z).
-rodzic(x, y).
-rodzic(x, a).
+mezczyzna(a).\
+osoba(b).\
+rodzic(a, b).\
+rodzic(y, z).\
+rodzic(x, y).\
+rodzic(x, a).\
 
 kobieta(X) :- osoba(X), not(mezczyzna(x)).
 
@@ -190,11 +190,11 @@ szukajw_tyl(POKOJ_Z_KLUCZEM, POKOJ_Z_WYJSCIEM) :-
 
 #### Dla chętnych 2
 
-Zadanie 1
-a)
+Zadanie 1\
+a)\
 Stałe indywidualne:
 * Markus
-* Cezar
+* Cezar\
 
 Predykaty:
 * człowiek
@@ -203,7 +203,7 @@ Predykaty:
 * władca
 * lojalność
 * nienawiść
-* zamach
+* zamach\
 
 
 * czlowiek(Markus)
@@ -213,11 +213,11 @@ Predykaty:
 * ∀x(rzymianin(x) -> (lojalnosc(x, Cezar) ∨ nienawisc(x, Cezar)))
 * ∀x ∃y(lojalny(x, y))
 * (zamach(x, y) ∧ wladca(y) ∧ czlowiek(x)) -> ∼lojalnosc(x, y)
-* zamach(Markus, Cezar)
+* zamach(Markus, Cezar)\
 
-b)
-(zamach(Markus, Cezar) ∧ wladca(Cezar) ∧ czlowiek(Markus)) -> ∼lojalnosc(Markus, Cezar)
-Markus nie był lojalny wobec Cezara.
+b)\
+(zamach(Markus, Cezar) ∧ wladca(Cezar) ∧ czlowiek(Markus)) -> ∼lojalnosc(Markus, Cezar)\
+Markus nie był lojalny wobec Cezara.\
 
 c)
 * czlowiek(Markus)
@@ -227,9 +227,9 @@ c)
 * ∀x(∼rzymianin(x) ∨ lojalnosc(x, Cezar) ∨ nienawisc(x, Cezar))
 * ∀x ∃y(lojalny(x, y))
 * ∼zamach(x, y) ∨ ∼wladca(y) ∨ ∼czlowiek(x) ∨ ∼lojalnosc(x, y)
-* zamach(Markus, Cezar)
+* zamach(Markus, Cezar)\
 
-d)
+d)\
 Dodajemy negację ∼lojalnosc(Markus, Cezar)\
 1.\
     ∼zamach(Markus, Cezar) ∨ ∼wladca(Cezar) ∨ ∼czlowiek(Markus) ∨ ∼lojalnosc(Markus, Cezar)\
@@ -253,7 +253,7 @@ Dodajemy negację ∼lojalnosc(Markus, Cezar)\
     Zostaje zbiór pusty, co pokazuje, że Markus nie jest lojalny wobec Cezara.\
 
 
-Zadanie 2
+Zadanie 2\
 
 a)
 * ∀x(pozywienie(x) -> lubi(Jan, x)
@@ -261,7 +261,7 @@ a)
 * pozywienie(kurczak)
 * ∀x,y(je(x, y) ∧ ∼zabija(y, x) -> pozywienie(y))
 * je(Adam, orzeszki) ∧ ∼zabija(orzeszki, Adam)
-* ∀x(je(Adam, x) -> je(Basia, x))
+* ∀x(je(Adam, x) -> je(Basia, x))\
 
 b)
 * ∀x(∼pozywienie(x) ∨ lubi(Jan, x)
@@ -269,50 +269,50 @@ b)
 * pozywienie(kurczak)
 * ∀x,y(∼je(x, y) ∨ zabija(y, x) ∨ pozywienie(y))
 * ∼(∼je(Adam, orzeszki) ∨ zabija(orzeszki, Adam))
-* ∀x(∼je(Adam, x) ∨ je(Basia, x))
+* ∀x(∼je(Adam, x) ∨ je(Basia, x))\
 
-c)
-Dodajemy negację pozywienie(orzeszki)
-1. 
-    je(Adam, orzeszki) ∧ ∼zabija(orzeszki, Adam)
-    ∼je(Adam, orzeszki) ∨ zabija(orzeszki, Adam) ∨ pozywienie(orzeszki)
-    ∼pozywienie(orzeszki)
-2.
-    ∼zabija(orzeszki, Adam)
-    zabija(orzeszki, Adam) ∨ pozywienie(orzeszki)
-    ∼pozywienie(orzeszki)
-3.
-    pozywienie(orzeszki))
-    ∼pozywienie(orzeszki)
-4. 
-    Zostaje zbiór pusty, co pokazuje, że pozywienie(orzeszki).
+c)\
+Dodajemy negację pozywienie(orzeszki)\
+1. \
+    je(Adam, orzeszki) ∧ ∼zabija(orzeszki, Adam)\
+    ∼je(Adam, orzeszki) ∨ zabija(orzeszki, Adam) ∨ pozywienie(orzeszki)\
+    ∼pozywienie(orzeszki)\
+2.\
+    ∼zabija(orzeszki, Adam)\
+    zabija(orzeszki, Adam) ∨ pozywienie(orzeszki)\
+    ∼pozywienie(orzeszki)\
+3.\
+    pozywienie(orzeszki))\
+    ∼pozywienie(orzeszki)\
+4. \
+    Zostaje zbiór pusty, co pokazuje, że pozywienie(orzeszki).\
 
-    Teraz wiedząc, że ∼pozywienie(orzeszki) ∨ lubi(Jan, orzeszki) możemy wywnioskować, że Jan lubi orzeszki.
+    Teraz wiedząc, że ∼pozywienie(orzeszki) ∨ lubi(Jan, orzeszki) możemy wywnioskować, że Jan lubi orzeszki.\
 
-d)
-∼je(Adam, x) ∨ je(Basia, x)
-je(Adam, orzeszki) 
+d)\
+∼je(Adam, x) ∨ je(Basia, x)\
+je(Adam, orzeszki) \
 
-1.
-    ∼je(Adam, orzeszki) ∨ je(Basia, orzeszki)
-    je(Adam, orzeszki)
-    ∼je(Basia, orzeszki)
-2.
-    je(Basia, orzeszki)
-    ∼je(Basia, orzeszki)
-3.
-    Zostaje zbiór pusty, czyli Basia je orzeszki.
+1.\
+    ∼je(Adam, orzeszki) ∨ je(Basia, orzeszki)\
+    je(Adam, orzeszki)\
+    ∼je(Basia, orzeszki)\
+2.\
+    je(Basia, orzeszki)\
+    ∼je(Basia, orzeszki)\
+3.\
+    Zostaje zbiór pusty, czyli Basia je orzeszki.\
 
 
-Zadanie 4
+Zadanie 4\
 
 1. narodziny(Markus, 40)
 2. zniszczenie(Pompeje, 79)
 3. ∀x ∃y,q,z((narodziny(x, y) ∧ zniszczenie(Pompeje, z) ∧ y <= z) -> ~zyje(x, q))
 4. ∀x ∃y,q,z((zyje(x, y) ∧ zniszczenie(Pompeje, z) ∧ y > z) -> narodziny(x, q) ∧ y - q <= 150)
 
-Można to wykazać na dwa spsoby:
-a) Z użyciem 3 podpunktu - Markus narodził się przed zniszeniem Pompejów, co implikuje, że nie żyje.
+Można to wykazać na dwa spsoby:\
+a) Z użyciem 3 podpunktu - Markus narodził się przed zniszeniem Pompejów, co implikuje, że nie żyje.\
 b) Z użyciem 4 podpunktu - narodziny Markusa i rok 2021 dzieli więcej niż 150 lat, czyli wartość po implikacji
 ma wartość 0. To znaczy, że wartość przed implikacją również musi posiadać wartość 0. Rok 2021 jest po zniszczeniu 
 Pompejów, czyli stwierdzenie, że Markus żyje w roku 2021 jest nieprawdziwe.
