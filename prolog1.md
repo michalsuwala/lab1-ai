@@ -118,6 +118,7 @@ przodek_do3pokolenia_wstecz(X,Y) :-
 
 drzwi(a, b).
 drzwi(b, c).
+drzwi(c, z).
 drzwi(b, d).
 drzwi(d, e).
 drzwi(e, f).
@@ -125,10 +126,10 @@ drzwi(e, f).
 klucz(e, kluczE).
 klucz(d, kluczD).
 
-otwiera(f, kluczE).
+otwiera(z, kluczE).
 
 
-:- dynamic visited/1, vis/1, vis2/1, found/0, klucze/1.
+:- dynamic visited/1, vis/1, vis2/1, vis3/1, found/0, klucze/1.
 
 
 szukaj_wyjscia(POKOJ_POCZATKOWY, POKOJ_Z_KLUCZEM, KLUCZ, POKOJ_Z_WYJSCIEM) :-
@@ -153,20 +154,26 @@ szukaj(POKOJ_POCZATKOWY, POKOJ_Z_KLUCZEM, KLUCZ, POKOJ_Z_WYJSCIEM) :-
     found;
     drzwi(POKOJ_POCZATKOWY, POKOJ),
     write('[przechodze_z, '), write(POKOJ_POCZATKOWY), write(', do, '), write(POKOJ), write(']'), nl,
-    szukaj(POKOJ, POKOJ_Z_KLUCZEM, KLUCZ, POKOJ_Z_WYJSCIEM).
+    szukaj(POKOJ, POKOJ_Z_KLUCZEM, KLUCZ, POKOJ_Z_WYJSCIEM);  
+    write('[wychodze_z, '), write(POKOJ_POCZATKOWY), write(']'), nl,
+    false.
 
 
 szukajw_przod(POKOJ, _) :-
     vis(POKOJ), !, fail.
 
+
 szukajw_przod(POKOJ_Z_KLUCZEM, POKOJ_Z_WYJSCIEM) :-
     (POKOJ_Z_WYJSCIEM = POKOJ_Z_KLUCZEM ->  
     write("WYJSCIE"), 
     found);
-    assert(vis(POKOJ_Z_KLUCZEM)),
     drzwi(POKOJ_Z_KLUCZEM, POKOJ),
+    assert(vis(POKOJ_Z_KLUCZEM)),
     write('[przechodze_z, '), write(POKOJ_Z_KLUCZEM), write(', do, '), write(POKOJ), write(']'), nl,
-    szukajw_przod(POKOJ, POKOJ_Z_WYJSCIEM).
+    szukajw_przod(POKOJ, POKOJ_Z_WYJSCIEM);
+    (vis3(POKOJ_Z_KLUCZEM) ->   true;
+    write('[wychodze_z, '), write(POKOJ_Z_KLUCZEM), write(']'), nl),
+    false.
 
 
 szukajw_tyl(POKOJ, _) :-
@@ -176,16 +183,15 @@ szukajw_tyl(POKOJ_Z_KLUCZEM, POKOJ_Z_WYJSCIEM) :-
     (POKOJ_Z_WYJSCIEM = POKOJ_Z_KLUCZEM -> 
     write("WYJSCIE"),
     found);
-    assert(vis2(POKOJ_Z_KLUCZEM)),
     drzwi(POKOJ, POKOJ_Z_KLUCZEM),
-    write('[przechodze_z, '), write(POKOJ_Z_KLUCZEM), write(', do, '), write(POKOJ), write(']'), nl,
+    assert(vis2(POKOJ_Z_KLUCZEM)),
+    assert(vis3(POKOJ)),
+    write('[wychodze_z, '), write(POKOJ_Z_KLUCZEM), write(']'), nl,
     szukajw_przod(POKOJ, POKOJ_Z_WYJSCIEM);
     drzwi(POKOJ, POKOJ_Z_KLUCZEM),    
     szukajw_tyl(POKOJ, POKOJ_Z_WYJSCIEM).
 
-
-?- szukaj_wyjscia(a, e, kluczE, f).
-
+?- szukaj_wyjscia(a, e, kluczE, z).
 
 
 #### Dla chętnych 2
